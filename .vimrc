@@ -1,5 +1,6 @@
 set nocompatible
 call pathogen#infect()
+set runtimepath^=~/.vim/bundle/ctrlp/doc
 
 " ========================================
 "         General
