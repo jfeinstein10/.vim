@@ -35,6 +35,7 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 set laststatus=2  " Always show the statusline
+set cursorline
 
 " Set the color scheme background properly?
 " hi Normal ctermbg=White ctermfg=Black guifg=Black guibg=White
