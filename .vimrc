@@ -9,14 +9,14 @@ set runtimepath^=~/.vim/bundle/ctrlp/doc
 " --- From http://nvie.com/posts/how-i-boosted-my-vim/
 set hidden        " Allows you to exit when using hidden buffers
 set nowrap        " Don't wrap lines
-set tabstop=4     " A tab is two spaces
-set backspace=indent,eol,start
-                  " Allow backspacing over everything in insert mode
+set backspace=indent,eol,start " Allow backspacing over everything in insert mode
+set tabstop=2     " A tab is fout spaces
+set shiftwidth=2  " Number of spaces to use for autoindenting
 set expandtab
 set autoindent    " Always set autoindenting on
+set si
 set copyindent    " Copy the previous indentation on autoindenting
 set number        " Always show line numbers
-set shiftwidth=4  " Number of spaces to use for autoindenting
 set shiftround    " Use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " Set show matching parenthesis
 set ignorecase    " Ignore case when searching
@@ -36,6 +36,8 @@ set nobackup
 set noswapfile
 set laststatus=2  " Always show the statusline
 set cursorline
+
+let g:Tex_DefaultTargetFormat='pdf'
 
 " Set the color scheme background properly?
 " hi Normal ctermbg=White ctermfg=Black guifg=Black guibg=White
@@ -101,7 +103,7 @@ nnoremap <C-u> <C-O>
 
 " Load font if enough colors are supported
 if &t_Co >= 256 || has("gui_running")
-   colorscheme mustang
+   colorscheme mustang 
 endif
 
 if &t_Co > 2 || has("gui_running")
