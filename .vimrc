@@ -36,6 +36,7 @@ set nobackup
 set noswapfile
 set laststatus=2  " Always show the statusline
 set cursorline
+set ruler
 
 let g:Tex_DefaultTargetFormat='pdf'
 
@@ -44,7 +45,7 @@ let g:Tex_DefaultTargetFormat='pdf'
 
 " Auto detect the indentation style
 :autocmd BufReadPost * :DetectIndent 
-au BufNewFile,BufRead *.soy set filetype=html
+au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set filetype=glsl
 
 " ========================================
 "         Keymaps
@@ -91,25 +92,18 @@ let g:EasyMotion_leader_key = ','
 " Easy open terminal
 cmap bh ConqueTerm bash
 
-" Chromebook keybindings (can't do a lot of Ctrl-<>)
-nnoremap <C-u> <C-O>
 " ========================================
 "         Colors
 " ========================================
 
-" hi link EasyMotionTarget TODO
-" hi EasyMotionTarget ctermbg=none ctermfg=Folded
-" hi EasyMotionShade  ctermbg=none ctermfg=blue
-
-" Load font if enough colors are supported
-if &t_Co >= 256 || has("gui_running")
-   colorscheme mustang 
-endif
-
-if &t_Co > 2 || has("gui_running")
-   " switch syntax highlighting on, when the terminal has colors
-   syntax on
-endif
+syntax on
+syntax enable
+let g:solarized_termtrans = 1
+let g:solarized_termcolors = 256
+set background=dark
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme mustang
 
 let g:neocomplcache_enable_at_startup = 1
 
