@@ -51,5 +51,16 @@ hi PreProc 		guifg=#faf4c6 gui=none ctermfg=230
 hi Todo         guifg=#000000 guibg=#e6ea50 gui=italic
 
 " Code-specific colors
-hi pythonOperator guifg=#7e8aa2 gui=none ctermfg=103
+hi Operator  guifg=#7e8aa2 gui=none ctermfg=103
+hi def link Entity Number
+hi def link Test String
+
+" NERDTree colors
+hi def link NERDTreeFile Statement
+hi def link NERDTreeDir Statement
+hi def link NERDTreeUp Statement
+hi def link NERDTreeOpenable String
+hi def link NERDTreeCloseable NERDTreeOpenable
+hi def link NERDTreeCWD String
+hi def link NERDTreePart String
 

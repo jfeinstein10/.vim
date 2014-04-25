@@ -1,6 +1,23 @@
 set nocompatible
-call pathogen#infect()
-set runtimepath^=~/.vim/bundle/ctrlp/doc
+"call pathogen#infect()
+"set runtimepath^=~/.vim/bundle/ctrlp/doc
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'kien/ctrlp.vim'
+Bundle 'ciaranm/detectindent'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
+Bundle 'bling/vim-airline'
+Bundle 'Townk/vim-autoclose'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Bundle 'tpope/vim-markdown'
+Bundle 'derekwyatt/vim-scala'
+
 
 " ========================================
 "         General
@@ -15,7 +32,7 @@ set shiftwidth=2  " Number of spaces to use for autoindenting
 set expandtab
 set autoindent    " Always set autoindenting on
 set si
-set copyindent    " Copy the previous indentation on autoindenting
+"set copyindent    " Copy the previous indentation on autoindenting
 set number        " Always show line numbers
 set shiftround    " Use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " Set show matching parenthesis
@@ -36,7 +53,10 @@ set nobackup
 set noswapfile
 set laststatus=2  " Always show the statusline
 set cursorline
-set ruler
+set cursorcolumn
+
+"set guifont=Inconsolata\ for\ Powerline
+"let g:airline_powerline_fonts = 1
 
 let g:Tex_DefaultTargetFormat='pdf'
 
@@ -86,25 +106,21 @@ set pastetoggle=<C-p>
 nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
 nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
-" Rebinds for EasyMotion
-let g:EasyMotion_leader_key = ','
-
-" Easy open terminal
-cmap bh ConqueTerm bash
+" Powerline options
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_section_warning = ''
 
 " ========================================
 "         Colors
 " ========================================
 
+filetype plugin indent on
 syntax on
 syntax enable
-let g:solarized_termtrans = 1
-let g:solarized_termcolors = 256
 set background=dark
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 colorscheme mustang
-
-let g:neocomplcache_enable_at_startup = 1
-
-filetype plugin indent on
