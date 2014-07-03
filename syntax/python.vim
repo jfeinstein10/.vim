@@ -51,8 +51,6 @@
 "       python_slow_sync
 "
 
-let python_highlight_all = 1
-
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
 if version < 600
@@ -101,7 +99,7 @@ syn keyword pythonStatement	with
 syn region  pythonClass start="^\s*class" end=")\s*:" contains=pythonClassDef,pythonClassName,pythonSuperclasses
 syn keyword pythonClassDef class contained nextgroup=pythonClassName
 syn match   pythonClassName	"[a-zA-Z_][a-zA-Z0-9_]*" display contained nextgroup=pythonSuperclasses skipwhite
-syn region  pythonSuperclasses start="("ms=s+1 end=")"me=e-1 keepend :contained contains=pythonSuperclass transparent
+syn region  pythonSuperclasses start="("ms=s+1 end=")"me=e-1 keepend contained contains=pythonSuperclass transparent
 syn match   pythonSuperclass "[a-zA-Z_][a-zA-Z_0-9]*" contained
 
 " Function definitions

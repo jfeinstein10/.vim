@@ -6,17 +6,26 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'kien/ctrlp.vim'
+Bundle 'Raimondi/delimitMate'
 Bundle 'ciaranm/detectindent'
+Bundle 'morhetz/gruvbox'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'Townk/vim-autoclose'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
+Bundle 'heavenshell/vim-pydocstring'
 Bundle 'derekwyatt/vim-scala'
+
+set guifont=Inconsolata:h14
 
 
 " ========================================
@@ -53,7 +62,7 @@ set nobackup
 set noswapfile
 set laststatus=2  " Always show the statusline
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 
 "set guifont=Inconsolata\ for\ Powerline
 "let g:airline_powerline_fonts = 1
@@ -123,4 +132,4 @@ syntax enable
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-colorscheme mustang
+colorscheme Vitamins
